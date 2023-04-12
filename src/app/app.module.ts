@@ -8,12 +8,16 @@ import { BoletaComponent } from './component/boleta/boleta.component';
 import { BoletaListarComponent } from './component/boleta/boleta-listar/boleta-listar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule} from '@angular/material/table';
+import { TipoAsociadoComponent } from './component/tipo-asociado/tipo-asociado.component';
+import { TipoAsociadoListarComponent } from './component/tipo-asociado/tipo-asociado-listar/tipo-asociado-listar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoletaComponent,
-    BoletaListarComponent
+    BoletaListarComponent,
+    TipoAsociadoComponent,
+    TipoAsociadoListarComponent
   ],
   imports: [
     BrowserModule,

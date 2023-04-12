@@ -44,7 +44,7 @@ module.exports = function () {
         descripcionGener:"Cumbia",
       },
     ],
-    Horario: [
+    horario: [
       {
         idHorario:1,
         fecha:"2023-04-05",
@@ -66,10 +66,28 @@ module.exports = function () {
         hora:"12:00:00"
       }
     ],
-    tiposAsociado: [
-
+    tipoAsociado: [
+      {
+        idTipoAsociado: 1,
+        descripcionTipoAsociado: "Banda"
+      },
+      {
+        idTipoAsociado: 2,
+        descripcionTipoAsociado: "Solista"
+      },
+      {
+        idTipoAsociado: 3,
+        descripcionTipoAsociado: "Dúo"
+      },
+      {
+        idTipoAsociado: 4,
+        descripcionTipoAsociado: "Orquesta"
+      },
+      {
+        idTipoAsociado: 5,
+        descripcionTipoAsociado: "DJ"
+      },
     ]
-    
   }
   return data
 }

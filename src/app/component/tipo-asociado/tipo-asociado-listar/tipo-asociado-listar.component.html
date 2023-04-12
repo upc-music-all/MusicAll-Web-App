@@ -1,0 +1,24 @@
+<div>
+  <table mat-table [dataSource]="dataSourceAsociado" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+       The actual rendered columns are set as a property on the row definition" -->
+
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="idTipoAsociado">
+     <th mat-header-cell *matHeaderCellDef> Id </th>
+     <td mat-cell *matCellDef="let element"> {{element.idTipoAsociado}} </td>
+    </ng-container>
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="tipoAsociado">
+     <th mat-header-cell *matHeaderCellDef> Tipo Asociado </th>
+     <td mat-cell *matCellDef="let element"> {{element.descripcionTipoAsociado}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+   </table>
+</div>
