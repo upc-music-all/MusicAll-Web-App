@@ -1,4 +1,4 @@
 export class TipoAsociado {
-  idTipoAsociado: number = 0;
+  id: number = 0;
   descripcionTipoAsociado: string = "";
 }

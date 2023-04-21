@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Registrar tipo asociado</h1>
+    <form class="form" [formGroup]="form" (submit)="aceptar()">
+
+      <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Código:</mat-label>
+        <input matInput placeholder="Código" formControlName="idTipoAsociado">
+      </mat-form-field>
+
+      <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Descripción:</mat-label>
+        <input matInput placeholder="Ejm: Banda" formControlName="descripcionTipoAsociado">
+      </mat-form-field>
+
+      <div>
+        <button class="btn" mat-raised-button color="primary">Aceptar</button>
+        <button class="btn" mat-raised-button color="warn" routerLink="/tipo-asociado">Cancelar</button>
+      </div>
+      <div>
+        <p>{{ mensaje }}</p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -68,23 +68,23 @@ module.exports = function () {
     ],
     tipoAsociado: [
       {
-        idTipoAsociado: 1,
+        id: 1,
         descripcionTipoAsociado: "Banda"
       },
       {
-        idTipoAsociado: 2,
+        id: 2,
         descripcionTipoAsociado: "Solista"
       },
       {
-        idTipoAsociado: 3,
+        id: 3,
         descripcionTipoAsociado: "Dúo"
       },
       {
-        idTipoAsociado: 4,
+        id: 4,
         descripcionTipoAsociado: "Orquesta"
       },
       {
-        idTipoAsociado: 5,
+        id: 5,
         descripcionTipoAsociado: "DJ"
       },
     ]

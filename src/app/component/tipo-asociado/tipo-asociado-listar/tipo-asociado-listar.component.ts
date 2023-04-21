@@ -11,12 +11,16 @@ import { MatTableDataSource} from '@angular/material/table';
 export class TipoAsociadoListarComponent implements OnInit {
   dataSourceAsociado: MatTableDataSource<TipoAsociado>=new MatTableDataSource();
   displayedColumns: string[] = ['idTipoAsociado', 'tipoAsociado'];
-  constructor(private bs: TipoAsociadoService) {
+  constructor(private taS: TipoAsociadoService) {
 
   }
 
   ngOnInit(): void {
-    this.bs.list().subscribe(data => {
+    this.taS.list().subscribe(data => {
+      this.dataSourceAsociado = new MatTableDataSource(data);
+    })
+
+    this.taS.getList().subscribe(data => {
       this.dataSourceAsociado = new MatTableDataSource(data);
     })
   }
