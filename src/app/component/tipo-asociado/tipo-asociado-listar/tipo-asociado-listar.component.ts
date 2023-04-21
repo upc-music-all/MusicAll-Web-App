@@ -10,7 +10,7 @@ import { MatTableDataSource} from '@angular/material/table';
 })
 export class TipoAsociadoListarComponent implements OnInit {
   dataSourceAsociado: MatTableDataSource<TipoAsociado>=new MatTableDataSource();
-  displayedColumns: string[] = ['idTipoAsociado', 'tipoAsociado'];
+  displayedColumns: string[] = ['idTipoAsociado', 'tipoAsociado', 'accion01'];
   constructor(private taS: TipoAsociadoService) {
 
   }
@@ -25,4 +25,7 @@ export class TipoAsociadoListarComponent implements OnInit {
     })
   }
 
+  filtrar(z: any) {
+    this.dataSourceAsociado.filter = z.target.value.trim();
+  }
 }

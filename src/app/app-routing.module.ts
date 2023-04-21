@@ -11,6 +11,10 @@ const routes: Routes = [
       {
         path: 'new',
         component: TipoAsociadoCreaeditaComponent
+      },
+      {
+        path: 'edicion/:id',
+        component: TipoAsociadoCreaeditaComponent
       }
     ]
   }

@@ -29,4 +29,12 @@ export class TipoAsociadoService {
   getList() {
     return this.listaCambio.asObservable();
   }
+
+  listId(id: number) {
+    return this.http.get<TipoAsociado>(`${this.url}/${id}`);
+  }
+
+  update(a: TipoAsociado) {
+    return this.http.put(this.url + "/" + a.id, a);
+  }
 }
