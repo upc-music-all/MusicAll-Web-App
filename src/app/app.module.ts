@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule} from '@angular/material/table';
 import { TipoAsociadoComponent } from './component/tipo-asociado/tipo-asociado.component';
 import { TipoAsociadoListarComponent } from './component/tipo-asociado/tipo-asociado-listar/tipo-asociado-listar.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { TipoAsociadoCreaeditaComponent } from './component/tipo-asociado/tipo-asociado-creaedita/tipo-asociado-creaedita.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
@@ -19,6 +18,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { TipoAsociadoDialogoComponent } from './component/tipo-asociado/tipo-asociado-listar/tipo-asociado-dialogo/tipo-asociado-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatToolbarModule} from '@angular/material/toolbar';
+
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BoletaCreaeditaComponent } from './component/boleta/boleta-creaedita/boleta-creaedita.component';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     TipoAsociadoComponent,
     TipoAsociadoListarComponent,
     TipoAsociadoCreaeditaComponent,
-    TipoAsociadoDialogoComponent
+    TipoAsociadoDialogoComponent,
+    BoletaCreaeditaComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     MatIconModule,
     MatDialogModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
