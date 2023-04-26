@@ -23,6 +23,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BoletaCreaeditaComponent } from './component/boleta/boleta-creaedita/boleta-creaedita.component';
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
