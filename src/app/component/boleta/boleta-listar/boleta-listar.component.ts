@@ -24,4 +24,8 @@ export class BoletaListarComponent implements OnInit{
       this.dataSource=new MatTableDataSource(data);
     })
   }
+
+  filtrar(z: any){
+    this.dataSource.filter=z.target.value.trim();
+  }
 }

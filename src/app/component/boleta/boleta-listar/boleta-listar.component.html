@@ -18,6 +18,10 @@
       <button mat-raised-button color="warn" routerLink="/boletas/new">Agregar</button>
     </div>
 
+    <mat-form-field>
+      <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
+    </mat-form-field>
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
       <!--- Note that these columns can be defined in any order.
