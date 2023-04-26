@@ -2,25 +2,25 @@ module.exports = function () {
   var data = {
     boletas: [
       {
-        idBoleta:1,
+        id:1,
         idContrato: 1,
         descripcion: "Presentación en boda",
         precioTotal:770.50,
       },
       {
-        idBoleta:2,
+        id:2,
         idContrato: 2,
         descripcion: "Festival de música",
         precioTotal:300.00,
       },
       {
-        idBoleta:3,
+        id:3,
         idContrato: 3,
         descripcion: "Fiesta de cumpleaños",
         precioTotal:400.00,
       },
       {
-        idBoleta:4,
+        id:4,
         idContrato: 4,
         descripcion: "Presentación en aniversario de colegio",
         precioTotal:250.00,

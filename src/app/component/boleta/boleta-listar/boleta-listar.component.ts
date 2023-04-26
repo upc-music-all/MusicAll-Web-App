@@ -10,13 +10,17 @@ import { MatTableDataSource} from '@angular/material/table';
 })
 export class BoletaListarComponent implements OnInit{
   dataSource: MatTableDataSource<Boleta>=new MatTableDataSource();
-  displayedColumns:string[]=['nboleta', 'ncontrato', 'descripcion', 'precio']
+  displayedColumns:string[]=['id', 'idContrato', 'descripcion', 'precioTotal', 'accion01']
   constructor(private bs: BoletaService) {
 
   }
 
   ngOnInit(): void {
     this.bs.list().subscribe(data=>{
+      this.dataSource=new MatTableDataSource(data);
+    })
+
+    this.bs.getList().subscribe(data=>{
       this.dataSource=new MatTableDataSource(data);
     })
   }

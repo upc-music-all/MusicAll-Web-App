@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div style="text-align: center;">
+      <h1>Registro de Boleta</h1>
+    </div>
+
+    <form [formGroup]="form" (submit)="aceptar()">
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="Id" formControlName="id">
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Id del Contrato</mat-label>
+        <input matInput placeholder="idContrato" formControlName="idContrato">
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Descripción</mat-label>
+        <input matInput placeholder="descripcion" formControlName="descripcion">
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Precio</mat-label>
+        <input matInput placeholder="precioTotal" formControlName="precioTotal">
+      </mat-form-field>
+
+      <br>
+
+      <div style="text-align: center;">
+        <button mat-raised-button color="primary">Aceptar</button>
+        <button mat-raised-button color="warn" routerLink="/boletas">Cancelar</button>
+      </div>
+
+      <br>
+
+      <p>{{mensaje}}</p>
+
+    </form>
+  </div>
+</body>
+
+</html>

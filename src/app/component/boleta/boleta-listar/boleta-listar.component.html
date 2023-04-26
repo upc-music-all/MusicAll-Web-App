@@ -7,7 +7,17 @@
   <title>Document</title>
 </head>
 <body>
-  <div>
+
+  <div class="container">
+
+    <div style="text-align: center;">
+      <h1>Lista de Boletas</h1>
+    </div>
+
+    <div style="text-align: right;">
+      <button mat-raised-button color="warn" routerLink="/boletas/new">Agregar</button>
+    </div>
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
       <!--- Note that these columns can be defined in any order.
@@ -15,14 +25,14 @@
 
 
       <!-- Position Column -->
-      <ng-container matColumnDef="nboleta">
+      <ng-container matColumnDef="id">
        <th mat-header-cell *matHeaderCellDef> No.boleta </th>
-       <td mat-cell *matCellDef="let element"> {{element.idBoleta}} </td>
+       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
       </ng-container>
 
 
       <!-- Name Column -->
-      <ng-container matColumnDef="ncontrato">
+      <ng-container matColumnDef="idContrato">
        <th mat-header-cell *matHeaderCellDef> No.contrato </th>
        <td mat-cell *matCellDef="let element"> {{element.idContrato}} </td>
       </ng-container>
@@ -30,15 +40,23 @@
 
       <!-- Weight Column -->
       <ng-container matColumnDef="descripcion">
-       <th mat-header-cell *matHeaderCellDef> descripcion </th>
+       <th mat-header-cell *matHeaderCellDef> Descripcion </th>
        <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
       </ng-container>
 
 
       <!-- Symbol Column -->
-      <ng-container matColumnDef="precio">
-       <th mat-header-cell *matHeaderCellDef> precio </th>
+      <ng-container matColumnDef="precioTotal">
+       <th mat-header-cell *matHeaderCellDef> Precio </th>
        <td mat-cell *matCellDef="let element"> {{element.precioTotal}} </td>
+      </ng-container>
+
+            <!-- Symbol Column -->
+      <ng-container matColumnDef="accion01">
+       <th mat-header-cell *matHeaderCellDef> Acciones </th>
+       <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" [routerLink]="['edicion', element.id]">Actualizar</button>
+       </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

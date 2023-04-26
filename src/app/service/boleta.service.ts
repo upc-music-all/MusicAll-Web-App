@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Boleta } from '../model/boleta';
+import { Subject } from 'rxjs';
 
 const base_url = environment.base
 @Injectable({
@@ -9,10 +10,26 @@ const base_url = environment.base
 })
 export class BoletaService {
   private url = `${base_url}/boletas`
+  private listaCambio = new Subject<Boleta[]>();
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  list(){
+  list() {
     return this.http.get<Boleta[]>(this.url)
+  }
+  insert(boleta: Boleta) {
+    return this.http.post(this.url, boleta);
+  }
+  setList(listaNueva: Boleta[]) {
+    this.listaCambio.next(listaNueva);
+  }
+  getList() {
+    return this.listaCambio.asObservable()
+  }
+  listId(id: number) {
+    return this.http.get<Boleta>(`${this.url}/${id}`)
+  }
+  update(b: Boleta) {
+    return this.http.put(this.url + "/" + b.id, b)
   }
 }

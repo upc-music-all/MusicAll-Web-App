@@ -10,6 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule} from '@angular/material/table';
 import { TipoAsociadoComponent } from './component/tipo-asociado/tipo-asociado.component';
 import { TipoAsociadoListarComponent } from './component/tipo-asociado/tipo-asociado-listar/tipo-asociado-listar.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BoletaCreaeditaComponent } from './component/boleta/boleta-creaedita/boleta-creaedita.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -17,14 +21,19 @@ import { TipoAsociadoListarComponent } from './component/tipo-asociado/tipo-asoc
     BoletaComponent,
     BoletaListarComponent,
     TipoAsociadoComponent,
-    TipoAsociadoListarComponent
+    TipoAsociadoListarComponent,
+    BoletaCreaeditaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
