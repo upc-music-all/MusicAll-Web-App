@@ -16,6 +16,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { TipoAsociadoDialogoComponent } from './component/tipo-asociado/tipo-asociado-listar/tipo-asociado-dialogo/tipo-asociado-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +28,8 @@ import { MatIconModule } from '@angular/material/icon';
     BoletaListarComponent,
     TipoAsociadoComponent,
     TipoAsociadoListarComponent,
-    TipoAsociadoCreaeditaComponent
+    TipoAsociadoCreaeditaComponent,
+    TipoAsociadoDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

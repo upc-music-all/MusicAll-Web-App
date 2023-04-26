@@ -9,7 +9,8 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class TipoAsociadoService {
-  private url = `${base_url}/tipoAsociado`
+  private url = `${base_url}/tipoAsociado`;
+  private confirmarEliminacion = new Subject<Boolean>()
   private listaCambio = new Subject<TipoAsociado[]>();
 
   constructor(private http: HttpClient) { }
@@ -36,5 +37,16 @@ export class TipoAsociadoService {
 
   update(a: TipoAsociado) {
     return this.http.put(this.url + "/" + a.id, a);
+  }
+
+  delete(id: number) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
+
+  getConfirmDelete(){
+    return this.confirmarEliminacion.asObservable();
+  }
+  setConfirmDelete(estado: Boolean){
+    this.confirmarEliminacion.next(estado);
   }
 }
