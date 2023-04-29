@@ -19,6 +19,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { BoletaDialogoComponent } from './component/boleta/boleta-listar/boleta-dialogo/boleta-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NavbarComponent } from './component/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     TipoAsociadoComponent,
     TipoAsociadoListarComponent,
     BoletaCreaeditaComponent,
-    BoletaDialogoComponent
+    BoletaDialogoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
