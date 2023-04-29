@@ -21,8 +21,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BoletaCreaeditaComponent } from './component/boleta/boleta-creaedita/boleta-creaedita.component';
-
-
+import { BoletaDialogoComponent } from './component/boleta/boleta-listar/boleta-dialogo/boleta-dialogo.component';
 
 
 
@@ -35,7 +34,8 @@ import { BoletaCreaeditaComponent } from './component/boleta/boleta-creaedita/bo
     TipoAsociadoListarComponent,
     TipoAsociadoCreaeditaComponent,
     TipoAsociadoDialogoComponent,
-    BoletaCreaeditaComponent
+    BoletaCreaeditaComponent,
+    BoletaDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -45,12 +45,12 @@ import { BoletaCreaeditaComponent } from './component/boleta/boleta-creaedita/bo
     MatTableModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatButtonModule,
+    FormsModule,
     MatInputModule,
+    MatButtonModule,
     MatIconModule,
     MatDialogModule,
     MatToolbarModule,
-    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,7 +9,8 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class BoletaService {
-  private url = `${base_url}/boletas`
+  private url = `${base_url}/boletas`;
+  private confirmarEliminacion = new Subject<Boolean>()
   private listaCambio = new Subject<Boleta[]>();
 
   constructor(private http: HttpClient) { }
@@ -31,5 +32,14 @@ export class BoletaService {
   }
   update(b: Boleta) {
     return this.http.put(this.url + "/" + b.id, b)
+  }
+  delete(id: number) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
+  getConfirmDelete(){
+    return this.confirmarEliminacion.asObservable();
+  }
+  setConfirmDelete(estado: Boolean){
+    this.confirmarEliminacion.next(estado);
   }
 }

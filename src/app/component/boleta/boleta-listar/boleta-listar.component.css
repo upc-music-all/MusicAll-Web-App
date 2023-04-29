@@ -1,0 +1,11 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.header-table {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
