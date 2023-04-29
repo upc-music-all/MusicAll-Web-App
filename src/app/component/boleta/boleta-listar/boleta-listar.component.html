@@ -10,13 +10,17 @@
 
   <div class="container">
 
-    <div style="text-align: center;">
+    <div style="text-align: left;">
       <h1>Lista de Boletas</h1>
     </div>
 
-    <div style="text-align: right;">
-      <button mat-raised-button color="warn" routerLink="/boletas/new">Agregar</button>
+    <br>
+
+    <div>
+      <button mat-raised-button color="primary" routerLink="/boletas/new"><mat-icon>add</mat-icon>Agregar</button>
     </div>
+
+    <br>
 
     <mat-form-field>
       <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
@@ -59,7 +63,8 @@
       <ng-container matColumnDef="accion01">
        <th mat-header-cell *matHeaderCellDef> Acciones </th>
        <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn" [routerLink]="['edicion', element.id]">Actualizar</button>
+        <button mat-icon-button [routerLink]="['edicion', element.id]"><mat-icon>update</mat-icon></button>
+        <button mat-icon-button (click)="confirmar(element.id)"><mat-icon>delete</mat-icon></button>
        </td>
       </ng-container>
 
