@@ -22,8 +22,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BoletaCreaeditaComponent } from './component/boleta/boleta-creaedita/boleta-creaedita.component';
 import { BoletaDialogoComponent } from './component/boleta/boleta-listar/boleta-dialogo/boleta-dialogo.component';
-
-
+import { NavbarComponent } from './component/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +34,8 @@ import { BoletaDialogoComponent } from './component/boleta/boleta-listar/boleta-
     TipoAsociadoCreaeditaComponent,
     TipoAsociadoDialogoComponent,
     BoletaCreaeditaComponent,
-    BoletaDialogoComponent
+    BoletaDialogoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
