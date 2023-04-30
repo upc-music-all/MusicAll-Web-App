@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { TipoAsociado } from 'src/app/model/tipo-asociado';
 import { TipoAsociadoService } from 'src/app/service/tipo-asociado.service';
 import { MatTableDataSource} from '@angular/material/table';
@@ -13,6 +13,7 @@ export class TipoAsociadoListarComponent implements OnInit {
   dataSourceAsociado: MatTableDataSource<TipoAsociado>=new MatTableDataSource();
   idMayor: number = 0;
   displayedColumns: string[] = ['idTipoAsociado', 'tipoAsociado', 'accion01'];
+
   constructor(private taS: TipoAsociadoService, private dialog: MatDialog) {
 
   }
@@ -29,6 +30,7 @@ export class TipoAsociadoListarComponent implements OnInit {
     this.taS.getConfirmDelete().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     })
+
   }
 
   confirmar(id: number) {

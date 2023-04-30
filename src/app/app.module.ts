@@ -18,7 +18,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { TipoAsociadoDialogoComponent } from './component/tipo-asociado/tipo-asociado-listar/tipo-asociado-dialogo/tipo-asociado-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     TipoAsociadoComponent,
     TipoAsociadoListarComponent,
     TipoAsociadoCreaeditaComponent,
-    TipoAsociadoDialogoComponent
+    TipoAsociadoDialogoComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     MatIconModule,
     MatDialogModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
