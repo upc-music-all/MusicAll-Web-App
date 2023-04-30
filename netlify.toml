@@ -1,5 +1,5 @@
 [build]
-  command = "ng build --configuration production --aot && npm run json-server"
+  command = "ng build --prod && npm run json-server"
   publish = "dist/music-all-web-app"
 
 [dev]
