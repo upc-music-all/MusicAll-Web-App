@@ -93,6 +93,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "MusicAll-Web-App:build:production",
+            "firebaseProject": "musicall-c40ef",
+            "firebaseHostingSite": "musicall-c40ef"
+          }
         }
       }
     }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "musicall-c40ef": {
+      "hosting": {
+        "MusicAll-Web-App": [
+          "musicall-c40ef"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "musicall-c40ef"
+  }
+}
