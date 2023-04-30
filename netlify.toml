@@ -1,0 +1,11 @@
+[build]
+  command = "ng build --configuration production --aot && npm run json-server"
+  publish = "dist/music-all-web-app"
+
+[dev]
+  command = "ng serve --open"
+
+[[redirects]]
+  from = "/api/*"
+  to = "http://localhost:5000/:splat"
+  status = 200

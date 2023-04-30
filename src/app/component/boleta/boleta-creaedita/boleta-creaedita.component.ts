@@ -42,7 +42,7 @@ export class BoletaCreaeditaComponent implements OnInit {
     this.boleta.descripcion = this.form.value['descripcion'];
     this.boleta.precioTotal = this.form.value['precioTotal'];
 
-    if (this.form.value['idContrato'] > 0 && this.form.value['descripcion'].length > 0 && this.form.value['precioTotal'] > 0) {
+    if (this.form.value['idContrato'].length > 0 && this.form.value['descripcion'].length > 0 && this.form.value['precioTotal'].length > 0) {
 
       if(this.edicion){
         //actualice
