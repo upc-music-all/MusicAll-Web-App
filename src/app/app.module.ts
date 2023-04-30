@@ -17,7 +17,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { TipoAsociadoDialogoComponent } from './component/tipo-asociado/tipo-asociado-listar/tipo-asociado-dialogo/tipo-asociado-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BoletaCreaeditaComponent } from './component/boleta/boleta-creaedita/boleta-creaedita.component';
@@ -35,7 +36,8 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     TipoAsociadoDialogoComponent,
     BoletaCreaeditaComponent,
     BoletaDialogoComponent,
-    NavbarComponent
+    NavbarComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    MatToolbarModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

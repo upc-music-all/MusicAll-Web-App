@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { TipoAsociado } from 'src/app/model/tipo-asociado';
 import { TipoAsociadoService } from 'src/app/service/tipo-asociado.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
@@ -12,10 +12,10 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class TipoAsociadoCreaeditaComponent implements OnInit {
   id: number = 0;
   edicion: boolean = false;
+  errorMessage: boolean = false;
 
   form: FormGroup = new FormGroup({});
   tipoAsociado: TipoAsociado = new TipoAsociado();
-  mensaje: string = "";
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
       this.id = data['id'];
@@ -25,7 +25,7 @@ export class TipoAsociadoCreaeditaComponent implements OnInit {
 
     this.form = new FormGroup({
       idTipoAsociado: new FormControl(),
-      descripcionTipoAsociado: new FormControl()
+      descripcionTipoAsociado: new FormControl('', [Validators.required])
     });
   }
 
@@ -52,7 +52,7 @@ export class TipoAsociadoCreaeditaComponent implements OnInit {
 
       this.router.navigate(['tipo-asociado']);
     } else {
-      this.mensaje = "Ingrese los datos";
+      this.errorMessage = true;
     }
   }
 
@@ -65,5 +65,9 @@ export class TipoAsociadoCreaeditaComponent implements OnInit {
         });
       })
     }
+  }
+
+  getErrorMessage() {
+    return this.errorMessage ? 'Ingresa un valor' : '';
   }
 }

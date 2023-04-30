@@ -4,8 +4,13 @@ import { TipoAsociadoCreaeditaComponent } from './component/tipo-asociado/tipo-a
 import { TipoAsociadoComponent } from './component/tipo-asociado/tipo-asociado.component';
 import { BoletaComponent } from './component/boleta/boleta.component';
 import { BoletaCreaeditaComponent } from './component/boleta/boleta-creaedita/boleta-creaedita.component';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: LandingPageComponent
+  },
   {
     path: 'tipo-asociado',
     component: TipoAsociadoComponent,

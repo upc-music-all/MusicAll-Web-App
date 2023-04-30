@@ -18,15 +18,13 @@
 
       <mat-form-field class="form-field" appearance="fill">
         <mat-label>Descripción:</mat-label>
-        <input matInput placeholder="Ejm: Banda" formControlName="descripcionTipoAsociado">
+        <input matInput placeholder="Ejm: Banda" formControlName="descripcionTipoAsociado" required>
+        <mat-error *ngIf="form.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
 
       <div>
         <button class="btn" mat-raised-button color="primary">Aceptar</button>
         <button class="btn" mat-raised-button color="warn" routerLink="/tipo-asociado">Cancelar</button>
-      </div>
-      <div>
-        <p>{{ mensaje }}</p>
       </div>
     </form>
   </div>
